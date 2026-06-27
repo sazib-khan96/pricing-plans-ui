@@ -1,0 +1,46 @@
+@media (max-width: 576px) {
+  .toggle_container {
+    padding: 20px;
+  }
+  .toggle_container .toggle {
+    width: 100%;
+    gap: 5px;
+    flex-wrap: wrap;
+  }
+
+.monthly_text,
+  .monthly_text.active,
+  .yearly_text,
+  .yearly_text.active {
+    font-size: 12px;
+  }
+
+/* toogle system responsive end  */
+
+.main_price_container {
+  max-width: 100%;
+  padding: 10px;
+}
+
+
+.Monthly_container,
+  .yearly_container {
+    width: 100%;
+    flex-direction: column;
+  }
+.Monthly_container {
+      width: 576px;
+  flex-direction: column;
+}
+
+
+ .Monthly_container .card,
+  .yearly_container .card {
+    flex: 1;
+    width: 100%;
+  }
+
+
+
+
+}

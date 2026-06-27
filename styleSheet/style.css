@@ -1,0 +1,152 @@
+*,
+*::after,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --background: #f6f5fa;
+  --secColor: #7a92f4;
+  --textColor: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+}
+body {
+  background-color: var(--background);
+}
+
+.main_price_container {
+  max-width: 900px;
+  padding: 50px 15px;
+}
+
+/* toggle container  */
+.toggle_container {
+  max-width: 1200px;
+  padding: 50px;
+  margin: 0 auto;
+}
+.toggle_container .toggle {
+  width: 900px;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.toggle label {
+  width: 70px;
+  height: 40px;
+  position: relative;
+  background-color: var(--textColor);
+  display: inline-block;
+  border-radius: 50px;
+  box-shadow: rgba(0 0 5px 10px 0 rgb(23, 39, 59, 0.5));
+  border: 1px solid rgba(65, 105, 225, 0.228);
+}
+.toggle label::after {
+  content: "";
+  height: 36px;
+  width: 36px;
+  background-color: var(--secColor);
+  position: absolute;
+  top: 1px;
+  left: 2px;
+  transform: translateX(0px);
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.2s linear;
+  box-shadow: 0 0 rgba(0 0 5px 10px 0 rgb(23, 39, 59, 0.5));
+}
+input {
+  display: none;
+}
+
+input:checked + label::after {
+  transform: translateX(28px);
+}
+
+.monthly_text{
+  opacity: 1;
+  font-weight: bold;
+  color: var(--secColor);
+  
+}
+.monthly_text.active{
+  opacity: 0.4;
+  font-weight: normal;
+  color: black;
+  
+}
+.yearly_text{
+  opacity: 0.4;
+  font-weight:bold;
+}
+.yearly_text.active{
+  opacity: 1;
+  font-weight: bold;
+  color: var(--secColor);
+}
+
+
+.main_price_container {
+  width: 1200px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.Monthly_container {
+  margin: 0 auto;
+  display: flex;
+  gap: 25px;
+}
+.Monthly_container .card {
+  flex: 1;
+}
+.yearly_container {
+  margin: 0 auto;
+  display: flex;
+  gap: 25px;
+  display: none;
+}
+.yearly_container .card {
+  flex: 1;
+}
+
+/* price card style  */
+.card {
+  padding: 25px 30px;
+  background-color: var(--textColor);
+  border-radius: 10px;
+}
+.card ul li {
+  list-style: none;
+  margin: 10px 0;
+}
+.card ul li::before{
+  content: "\f061"; /* fa-check */
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: green;
+  margin-right: 8px;
+}
+.card .items {
+  margin-top: 25px;
+}
+.card button {
+  margin-top: 20px;
+  background-color: var(--secColor);
+  border-radius: 50px;
+  border: none;
+  padding: 12px 26px;
+  color: var(--textColor);
+  cursor: pointer;
+}
+.card span {
+  font-size: 14px;
+}
+.card h3 {
+  margin: 15px 0;
+}
